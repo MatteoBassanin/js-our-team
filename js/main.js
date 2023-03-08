@@ -57,9 +57,9 @@ for ( let key in ourTeam) {
     let containerImgDom = document.createElement("div");
 
     containerImgDom.innerHTML = `
-            <span class="name">${ourTeam[key].name}</span>
+            <div class="name">${ourTeam[key].name}</div>
             <img src="img/${ourTeam[key].image}">
-            <span class="name">${ourTeam[key].position}</span>
+            <div class="name">${ourTeam[key].position}</div>
 
     `;
     containerImgDom.classList.add("container")
@@ -69,16 +69,3 @@ for ( let key in ourTeam) {
 
 
 
-
-for ( let key in ourTeam) {
-    let containerImgDom = document.createElement("div");
-
-    containerImgDom.innerHTML = `
-            <span class="name">${ourTeam[key].name}</span>
-            <img src="img/${ourTeam[key].image}">
-            <span class="name">${ourTeam[key].position}</span>
-
-    `;
-    containerImgDom.classList.add("container")
-    teamDom.appendChild(containerImgDom);
-}
