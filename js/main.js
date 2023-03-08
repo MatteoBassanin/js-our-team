@@ -51,3 +51,26 @@ let ourTeamString = JSON.stringify(ourTeam);
 
 let teamDom = document.getElementById("team");
 teamDom.innerHTML = ourTeamString;
+
+
+// let imgDom = getElementById("container");
+// imgDom = document.createElement('div');
+// imgDom.innerHTML = (src="/Users/matteobassanin/Desktop/Boolean/js-our-team/img/angela-caroll-chief-editor.jpg");
+
+
+
+let imgListDom = document.querySelector(".container");
+
+bigWrapperDom = "";
+
+
+for (let i = 0; i < ourTeam.length; i++ ){
+    const newImgWrapper =   `<img src="/Users/matteobassanin/Desktop/Boolean/js-our-team/img/angela-caroll-chief-editor.jpg">
+    
+    `;
+
+    bigWrapperDom += newImgWrapper;
+
+}
+
+imgListDom.innerHTML = bigWrapperDom;
