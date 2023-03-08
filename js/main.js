@@ -65,11 +65,11 @@ bigWrapperDom = "";
 
 
 for (let i = 0; i < ourTeam.length; i++ ){
-    const newImgWrapper =   `<img src="/Users/matteobassanin/Desktop/Boolean/js-our-team/img/angela-caroll-chief-editor.jpg">
+    const newImgDom =   `<img src="/Users/matteobassanin/Desktop/Boolean/js-our-team/img/" + ${ourTeam[i]}>
     
     `;
 
-    bigWrapperDom += newImgWrapper;
+    bigWrapperDom += newImgDom;
 
 }
 
