@@ -53,24 +53,40 @@ let teamDom = document.getElementById("team");
 teamDom.innerHTML = ourTeamString;
 
 
-// let imgDom = getElementById("container");
-// imgDom = document.createElement('div');
-// imgDom.innerHTML = (src="/Users/matteobassanin/Desktop/Boolean/js-our-team/img/angela-caroll-chief-editor.jpg");
-
-
 
 let imgListDom = document.querySelector(".container");
-
-bigWrapperDom = "";
+let nameDom = document.querySelector(".container");
+let positionDom = document.querySelector(".container");
+bigImgDom = "";
+bigNameDom = "";
+bigPositionDom = "";
 
 
 for (let i = 0; i < ourTeam.length; i++ ){
-    const newImgDom =   `<img src="/Users/matteobassanin/Desktop/Boolean/js-our-team/img/" + ${ourTeam[i]}>
-    
-    `;
+    const containerImgDom = "<div></div>"
+    containerImgDom.classList.add("image")
+    const newImgDom =   `<img src="img/${ourTeam[i].image}"> `;   
+    bigImgDom += newImgDom;
 
-    bigWrapperDom += newImgDom;
+    const containerNameDom = "<div></div>"
+    containerNameDom.classList.add("name")
+    const newNameDom =   `<div>${ourTeam[i].name}"</div> `;   
+    bigNameDom += newNameDom;
+
+    const containerPositionDom = "<div></div>"
+    containerPositionDom.classList.add("position")
+    const newPositionDom =   `<div>${ourTeam[i].position}"</div> `;   
+    bigPositionDom += newPositionDom;
 
 }
+imgListDom.innerHTML = bigImgDom;
+nameDom.innerHTML = bigNameDom;
+positionDom.innerHTML = bigPositionDom;
 
-imgListDom.innerHTML = bigWrapperDom;
+
+
+
+
+// <!-- <div class="name"></div>
+// <img src="" alt="">
+// <div class="position"></div> -->
