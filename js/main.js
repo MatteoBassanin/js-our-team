@@ -38,6 +38,17 @@ const ourTeam =[
 
 
 console.log(ourTeam);
+let teamDom = document.getElementById("team");
+// teamDom.innerHTML = ourTeam;
+
+
+
 for ( let key in ourTeam) {
     console.log(ourTeam[key]);
+}
+
+
+
+for ( let key in ourTeam) {
+    teamDom.innerHTML = ourTeam.key;
 }
