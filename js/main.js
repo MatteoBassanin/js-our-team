@@ -55,27 +55,30 @@ teamDom.innerHTML = ourTeamString;
 
 
 let imgListDom = document.querySelector(".container");
-let nameDom = document.querySelector(".container");
-let positionDom = document.querySelector(".container");
+let nameDom = document.querySelector(".container_1");
+let positionDom = document.querySelector(".container_2");
 bigImgDom = "";
 bigNameDom = "";
 bigPositionDom = "";
 
 
 for (let i = 0; i < ourTeam.length; i++ ){
-    const containerImgDom = "<div></div>"
-    containerImgDom.classList.add("image")
-    const newImgDom =   `<img src="img/${ourTeam[i].image}"> `;   
+
+
+
+    let containerImgDom = document.createElement("div");
+    containerImgDom.classList.add("image");
+    let newImgDom =   `<img src="img/${ourTeam[i].image}"> `;   
     bigImgDom += newImgDom;
 
-    const containerNameDom = "<div></div>"
-    containerNameDom.classList.add("name")
-    const newNameDom =   `<div>${ourTeam[i].name}"</div> `;   
+    let containerNameDom = document.createElement("div");
+    containerNameDom.classList.add("name");
+    let newNameDom =   `<div>${ourTeam[i].name}"</div> `;   
     bigNameDom += newNameDom;
 
-    const containerPositionDom = "<div></div>"
-    containerPositionDom.classList.add("position")
-    const newPositionDom =   `<div>${ourTeam[i].position}"</div> `;   
+    let containerPositionDom = document.createElement("div");
+    containerPositionDom.classList.add("position");
+    let newPositionDom =   `<div>${ourTeam[i].position}"</div> `;   
     bigPositionDom += newPositionDom;
 
 }
@@ -86,7 +89,3 @@ positionDom.innerHTML = bigPositionDom;
 
 
 
-
-// <!-- <div class="name"></div>
-// <img src="" alt="">
-// <div class="position"></div> -->
