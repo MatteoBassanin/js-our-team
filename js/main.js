@@ -38,8 +38,6 @@ const ourTeam =[
 
 
 console.log(ourTeam);
-let teamDom = document.getElementById("team");
-// teamDom.innerHTML = ourTeam;
 
 
 
@@ -47,8 +45,9 @@ for ( let key in ourTeam) {
     console.log(ourTeam[key]);
 }
 
+let ourTeamString = JSON.stringify(ourTeam);
 
 
-for ( let key in ourTeam) {
-    teamDom.innerHTML = ourTeam.key;
-}
+
+let teamDom = document.getElementById("team");
+teamDom.innerHTML = ourTeamString;
