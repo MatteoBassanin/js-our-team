@@ -35,3 +35,9 @@ const ourTeam =[
         "image": "barbara-ramos-graphic-designer.jpg",
     }
 ]
+
+
+console.log(ourTeam);
+for ( let key in ourTeam) {
+    console.log(ourTeam[key]);
+}
