@@ -37,55 +37,48 @@ const ourTeam =[
 ]
 
 
-console.log(ourTeam);
+// console.log(ourTeam);
 
 
 
-for ( let key in ourTeam) {
-    console.log(ourTeam[key]);
-}
+// for ( let key in ourTeam) {
+//     console.log(ourTeam[key]);
+// }
 
 let ourTeamString = JSON.stringify(ourTeam);
 
 
 
 let teamDom = document.getElementById("team");
-teamDom.innerHTML = ourTeamString;
 
 
 
-let imgListDom = document.querySelector(".container");
-let nameDom = document.querySelector(".container_1");
-let positionDom = document.querySelector(".container_2");
-bigImgDom = "";
-bigNameDom = "";
-bigPositionDom = "";
-
-
-for (let i = 0; i < ourTeam.length; i++ ){
-
-
-
+for ( let key in ourTeam) {
     let containerImgDom = document.createElement("div");
-    containerImgDom.classList.add("image");
-    let newImgDom =   `<img src="img/${ourTeam[i].image}"> `;   
-    bigImgDom += newImgDom;
 
-    let containerNameDom = document.createElement("div");
-    containerNameDom.classList.add("name");
-    let newNameDom =   `<div>${ourTeam[i].name}"</div> `;   
-    bigNameDom += newNameDom;
+    containerImgDom.innerHTML = `
+            <span class="name">${ourTeam[key].name}</span>
+            <img src="img/${ourTeam[key].image}">
+            <span class="name">${ourTeam[key].position}</span>
 
-    let containerPositionDom = document.createElement("div");
-    containerPositionDom.classList.add("position");
-    let newPositionDom =   `<div>${ourTeam[i].position}"</div> `;   
-    bigPositionDom += newPositionDom;
-
+    `;
+    containerImgDom.classList.add("container")
+    teamDom.appendChild(containerImgDom);
 }
-imgListDom.innerHTML = bigImgDom;
-nameDom.innerHTML = bigNameDom;
-positionDom.innerHTML = bigPositionDom;
 
 
 
 
+
+for ( let key in ourTeam) {
+    let containerImgDom = document.createElement("div");
+
+    containerImgDom.innerHTML = `
+            <span class="name">${ourTeam[key].name}</span>
+            <img src="img/${ourTeam[key].image}">
+            <span class="name">${ourTeam[key].position}</span>
+
+    `;
+    containerImgDom.classList.add("container")
+    teamDom.appendChild(containerImgDom);
+}
